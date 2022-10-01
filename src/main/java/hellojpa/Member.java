@@ -10,6 +10,9 @@ import javax.persistence.Table;
 @Table(name="Member")
 public class Member {
 
+    public Member(){
+
+    }
     @Id
     private Long id;
     private String name;
@@ -27,6 +30,11 @@ public class Member {
     }
 
     public void setName(String name) {
+        this.name = name;
+    }
+
+    public Member(Long id, String name) {
+        this.id = id;
         this.name = name;
     }
 }

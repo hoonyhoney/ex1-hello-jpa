@@ -17,13 +17,18 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Member findMember = em.find(Member.class,1L);
+/*            Member findMember = em.find(Member.class,1L);
             System.out.println("findMember.id" + findMember.getId());
             System.out.println("findMember.name" + findMember.getName());
-            findMember.setName("HelloJPA");
-            
+            findMember.setName("HelloJPA");*/
 
-            tx.commit();
+            Member member = em.find(Member.class, 150L);
+            member.setName("ZZZZZ");
+
+
+            System.out.println("==============");
+
+            tx.commit(); //커밋할때 쿼리가 날라감
 
         }catch (Exception e){
             tx.rollback();
