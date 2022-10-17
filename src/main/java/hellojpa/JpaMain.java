@@ -22,10 +22,6 @@ public class JpaMain {
             System.out.println("findMember.name" + findMember.getName());
             findMember.setName("HelloJPA");*/
 
-            Member member = em.find(Member.class, 150L);
-            member.setName("ZZZZZ");
-
-
             System.out.println("==============");
 
             tx.commit(); //커밋할때 쿼리가 날라감
